@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>SAKSI</title>
+  <meta name="description" content="Prototipe aplikasi SAKSI: pemantau waktu dan suhu makanan Makan Bergizi Gratis berbasis pembacaan label antosianin kulit manggis.">
+  <meta name="theme-color" content="#2b1630">
+  <link rel="icon" href="assets/ikon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <a class="lewati" href="#app">Lewati ke konten</a>
+  <header class="bar">
+    <a class="merek" href="#/" aria-label="SAKSI, ke beranda">
+      <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><circle cx="16" cy="16" r="13" fill="none" stroke="#e9c53a" stroke-width="4" stroke-dasharray="27 3 27 3 13 9"/><circle cx="16" cy="16" r="7.5" fill="#8c5c2a"/></svg>
+      <span>SAKSI</span>
+    </a>
+    <nav class="nav" aria-label="Peran">
+      <a href="#/dapur">Dapur</a>
+      <a href="#/guru">Guru</a>
+      <a href="#/pengawas">Pengawas</a>
+    </nav>
+    <div class="jam">
+      <button id="btn-jam" class="jam-btn" type="button" aria-expanded="false" aria-controls="jam-panel">
+        <span class="tabular" data-jam>--.--</span><span id="jam-laju" class="jam-laju"></span>
+        <span class="sr">Atur jam simulasi</span>
+      </button>
+      <div id="jam-panel" class="jam-panel" hidden>
+        <p><strong>Jam simulasi</strong><br><span class="muted"><span data-tgl></span>. Percepat waktu untuk melihat label berubah.</span></p>
+        <div class="seg" role="group" aria-label="Kecepatan waktu">
+          <button type="button" data-laju="1">Normal</button>
+          <button type="button" data-laju="60">1 menit = 1 jam</button>
+          <button type="button" data-laju="240">1 menit = 4 jam</button>
+        </div>
+        <div class="seg" role="group" aria-label="Majukan waktu">
+          <button type="button" data-maju="30">Maju 30 menit</button>
+          <button type="button" data-maju="60">Maju 1 jam</button>
+        </div>
+        <button type="button" id="btn-reset" class="btn-teks">Atur ulang data contoh</button>
+      </div>
+    </div>
+  </header>
+  <main id="app" tabindex="-1"></main>
+  <footer class="kaki">
+    <p>Prototipe aplikasi SAKSI untuk Lomba Esai HIMATETA Universitas Riau 2026, oleh Muhammad Abdillah, Universitas Brawijaya. Semua SPPG, sekolah, dan batch adalah data contoh. Ambang warna label mengacu pada Rachmawati dkk. (2016) dan perlu dikalibrasi untuk menu MBG.</p>
+  </footer>
+  <script src="vendor/qrcode.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

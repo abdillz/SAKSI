@@ -1,0 +1,11 @@
+{
+  "name": "SAKSI",
+  "short_name": "SAKSI",
+  "description": "Pemantau waktu dan suhu makanan Makan Bergizi Gratis berbasis pembacaan label antosianin.",
+  "start_url": "./#/",
+  "display": "standalone",
+  "background_color": "#f4f5f1",
+  "theme_color": "#2b1630",
+  "lang": "id",
+  "icons": [{ "src": "assets/ikon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}
